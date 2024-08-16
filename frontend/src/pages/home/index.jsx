@@ -6,6 +6,9 @@ import img3 from '../../assets/images/gucci.png'
 import img4 from '../../assets/images/prada.png'
 import img5 from '../../assets/images/klein.png'
 import ProductWrapper from '../../components/product-wrapper'
+import { PRODUCTS } from '../../static'
+import CommentWrapper from '../../components/comment-wrapper'
+
 const Home = () => {
 
     return (
@@ -20,7 +23,10 @@ const Home = () => {
                     <img src={img5} alt="" />
                 </div>
             </div>
-            <ProductWrapper />
+            <ProductWrapper title="NEW ARRIVALS" products={PRODUCTS} />
+            <p className='max-w-[1240px] w-full mx-auto h-[2px] bg-[#0000001A]'></p>
+            <ProductWrapper title="TOP SELLING" star={4} end={8} products={PRODUCTS} />
+            <CommentWrapper />
         </section>
     )
 }
